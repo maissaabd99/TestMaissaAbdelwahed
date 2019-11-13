@@ -1,0 +1,9 @@
+<h5 *ngFor="let t of tab">
+{{t.libelle |uppercase}}<br>
+<img [src]="t.img" width="50px" height="50px"><br>
+<ul>
+    <li *ngIf="t.prixTTC  >100 && 200 >t.prixTTC" class="c1"> Prix : {{t.prixTTC}}</li>
+    <li *ngIf="t.prixTTC  >100 && 200 >t.prixTTC" class="c1"><input type="checkbox" [disabled]="!t.neuf">Neuf </li>
+    <li *ngIf="t.neuf==false"><button (click)="calcul($event)">Prix Original</button><input type="text" ></li>
+</ul>
+</h5>
